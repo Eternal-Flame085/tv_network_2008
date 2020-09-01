@@ -10,4 +10,11 @@ class NetworkTest < Minitest::Test
 
     assert_instance_of Network, nbc
   end
+
+  def test_it_has_values
+    nbc = Network.new("NBC")
+
+    assert_equal "NBC", nbc.name
+    assert_equal [], nbc.shows
+  end
 end
