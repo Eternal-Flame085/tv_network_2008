@@ -5,4 +5,16 @@ class Show
     @creator = creator
     @characters = characters
   end
+
+  def total_salary
+    total = 0
+    @characters.each do |actor|
+      total += actor.salary
+    end
+    total
+  end
+
+  def highest_paid_actor
+    @characters.max_by {|actor| actor.salary}.actor
+  end
 end
